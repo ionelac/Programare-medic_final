@@ -2,21 +2,37 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Programare_medic_final.ProgramarePage"
-             Title="ProgramarePage">
+             Title="ProgramarePage"
+             xmlns:local="clr-namespace:Programare_medic_final">
     <StackLayout Margin="20">
         <Editor Placeholder="Descrieți succint simptomele pe care le-ați identificat."
                 Text="{Binding Description}"
-                HeightRequest="100" />
+                HeightRequest="50" >
+                <Editor.Behaviors>
+                    <local:ValidationBehaviour />
+                    </Editor.Behaviors>
+        </Editor>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Text="Save"
+            <Button Text="Salvați!"
                     Clicked="OnSaveButtonClicked" />
             <Button Grid.Column="1"
-                    Text="Delete"
+                    Text="Ștergeți!"
                     Clicked="OnDeleteButtonClicked"/>
         </Grid>
+        
+        <ListView x:Name="listView"
+                  Margin="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Detail="{Binding Description}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <Button Text="Selectează serviciul" MaximumWidthRequest="300" Clicked="OnChooseButtonClicked"/>
     </StackLayout>
 </ContentPage>

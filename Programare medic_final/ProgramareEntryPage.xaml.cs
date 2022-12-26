@@ -4,11 +4,12 @@ namespace Programare_medic_final;
 
 public partial class ProgramareEntryPage : ContentPage
 {
-    public ProgramareEntryPage()
-    {
-        InitializeComponent();
-    }
-        protected override async void OnAppearing()
+	public ProgramareEntryPage()
+	{
+		InitializeComponent();
+
+	}
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
         listView.ItemsSource = await App.Database.GetProgramariAsync();
@@ -30,5 +31,4 @@ public partial class ProgramareEntryPage : ContentPage
             });
         }
     }
-
 }
