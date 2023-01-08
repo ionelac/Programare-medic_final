@@ -17,9 +17,6 @@ namespace Programare_medic_final.Models
 
         //Description: descrierea problemei pacientului
         public string Description { get; set; }
-
-        //????????????????????
-        [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
     }

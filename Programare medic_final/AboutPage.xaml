@@ -5,13 +5,15 @@
              Title="AboutPage">
     <VerticalStackLayout Spacing="10" Margin="10">
         <HorizontalStackLayout Spacing="10">
-            <Image Source="programari.png"
+            <Image Source="about.png"
  SemanticProperties.Description="Programare"
 HeightRequest="64" />
             <Label FontSize="22" FontAttributes="Bold" Text="Programari" VerticalOptions="End" />
             <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
         </HorizontalStackLayout>
-        <Label Text="This app will help you to manage your appointments" />
+        <Label Text="Aplicația aceasta o să te asiste în realizarea unei programări."/>
+        <Label Text= "Anumite examinari trebuie realizate in mod regulat pentru a observa starea de sanatate a unei persoane.Prin realizarea unor anumite analize si investigatii se pot detecta boli ce abia debuteaza, astfel incat se pot primi tratamente adecvate. De asemenea, cu cat afectiunile de sanatate sunt depistate mai rapid, cu atat prognosticul va fi mai bun.In urma consultului medical, specialistii din domeniul sanatatii pot recomanda anumite examene de screening." />
+        <Label Text="De exemplu, se pot realiza examene de screening pentru diferite tipuri de cancer, precum cel de san sau de col uterin. Examenele de screening se indica tuturor persoanelor, dar sunt mult mai recomandate persoanelor ce au asociati anumiti factori de risc, precum diabetul, fumatul, IMC-ul crescut sau un istoric medical familial nefavorabil." />
 
     </VerticalStackLayout>
 </ContentPage>
